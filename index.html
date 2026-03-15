@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gérard KOUADIO | Data Analyst | Data Scientist | Machine Learning </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #050507; color: #94a3b8; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #050507; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #444; }
+
+    .glass-card {
+      background: rgba(20, 20, 25, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    @keyframes gradient-x {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fade-in-up {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes stream-flow {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .animate-gradient-text {
+      background-size: 200% auto;
+      animation: gradient-x 4s linear infinite;
+    }
+
+    .animate-enter {
+      animation: fade-in-up 0.8s ease-out forwards;
+    }
+
+    .data-stream {
+      position: absolute;
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #6366f1, transparent);
+      filter: blur(1px);
+      animation: stream-flow 3s linear infinite;
+      pointer-events: none;
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-5px) scale(1.01);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+  </style>
+</head>
+
+<body class="antialiased relative selection:bg-indigo-500/30 selection:text-indigo-200 overflow-x-hidden">
+
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="data-stream" style="top: 20%; left: 5%; animation-delay: 0s;"></div>
+    <div class="data-stream" style="top: 60%; left: 15%; animation-delay: 1.5s;"></div>
+  </div>
+
+  <nav class="fixed top-0 w-full z-50 pt-6 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="glass-card rounded-full px-6 py-3 flex items-center justify-between hover-lift">
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-8 h-8 rounded bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-indigo-500/20">
+            GK
+          </div>
+          <span class="text-sm font-semibold tracking-tight text-white group-hover:text-indigo-200 transition-colors">
+            Gérard<span class="text-slate-500">.Data Scientist</span>
+          </span>
+        </a>
+
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+          <li><a href="#about" class="hover:text-white transition-colors">Expertise</a></li>
+          <li><a href="#experience" class="hover:text-white transition-colors">Parcours</a></li>
+          <li><a href="#projects" class="hover:text-white transition-colors">Projets</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/gérard-kouadio-1er?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BaxK%2FP0MPSxCiZnJeWqnHBQ%3D%3D" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl flex items-center">
+            <iconify-icon icon="line-md:linkedin"></iconify-icon>
+          </a>
+          <a href="https://github.com/gekkouadio-star" target="_blank" class="text-slate-400 hover:text-white transition-colors text-xl flex items-center">
+            <iconify-icon icon="line-md:github-loop"></iconify-icon>
+          </a>
+          <a href="mailto:gekkouadio@gmail.com" 
+            class="hidden sm:flex items-center gap-2 text-xs font-semibold bg-white/5 border border-white/10 text-white px-4 py-2 rounded-full hover:bg-white/10 transition-all">
+            <iconify-icon icon="solar:letter-linear" class="text-lg"></iconify-icon>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative z-10 pt-40 pb-32 px-6">
+    <div class="flex flex-col text-center max-w-4xl mx-auto items-center">
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-medium mb-10 text-indigo-300 animate-pulse">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-indigo-400"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+        </span>
+        DISPONIBLE POUR NOUVEAUX DÉFIS
+      </div>
+
+      <div class="relative mb-8">
+        <h1 class="text-5xl md:text-7xl font-semibold tracking-tight mb-2 leading-[0.95] text-white animate-enter">
+          Data Scientist & Analyste
+        </h1>
+        <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[0.95] text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 animate-gradient-text animate-enter">
+          Expert en Risques.
+        </h1>
+
+      <p class="leading-relaxed text-lg text-slate-400 max-w-2xl mb-12 font-light">
+        Expert en <span class="text-indigo-400 font-normal">Machine Learning</span> et 
+        <span class="text-indigo-400 font-normal">Analyse des Risques</span>.
+        Diplômé de Montpellier, je transforme les données massives en leviers de décision stratégique pour la finance.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <a href="#projects" class="px-8 py-3.5 bg-white text-black rounded-xl font-semibold shadow-lg hover:bg-slate-200 transition-all">
+          Voir mes travaux
+        </a>
+        <a href="public/CV_Actuaire modélisation_Gerard KOUADIO.pdf" target="_blank" class="flex items-center gap-2 px-8 py-3.5 bg-white/5 border border-white/10 text-slate-300 rounded-xl font-medium hover:bg-white/10 transition-all">
+          <iconify-icon icon="solar:download-minimalistic-linear" class="text-lg"></iconify-icon>
+          Télécharger CV (PDF)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="relative z-10 py-24 px-6 border-t border-white/5 bg-white/[0.01]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">Expertise & <span class="text-indigo-400">Stack Technique</span></h2>
+        <p class="text-slate-500 text-sm max-w-xl mx-auto italic underline underline-offset-8 decoration-indigo-500/30">L'alliance de la rigueur bancaire et de la puissance algorithmique.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover-lift">
+          <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6">
+            <iconify-icon icon="solar:cpu-linear" class="text-xl"></iconify-icon>
+          </div>
+          <h4 class="text-base font-medium mb-2 text-white">Machine Learning</h4>
+          <p class="text-sm text-slate-500 mb-4">Modélisation prédictive, LSTM pour séries temporelles et XGBoost.</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="text-[10px] font-mono text-indigo-300 bg-indigo-500/10 px-2 py-1 rounded">Python</span>
+            <span class="text-[10px] font-mono text-indigo-300 bg-indigo-500/10 px-2 py-1 rounded">TensorFlow</span>
+          </div>
+        </div>
+
+        <div class="group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover-lift">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
+            <iconify-icon icon="solar:database-linear" class="text-xl"></iconify-icon>
+          </div>
+          <h4 class="text-base font-medium mb-2 text-white">Big Data</h4>
+          <p class="text-sm text-slate-500 mb-4">Traitement de flux massifs et pipelines de données complexes.</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="text-[10px] font-mono text-purple-300 bg-purple-500/10 px-2 py-1 rounded">PySpark</span>
+            <span class="text-[10px] font-mono text-purple-300 bg-purple-500/10 px-2 py-1 rounded">SQL</span>
+          </div>
+        </div>
+
+        <div class="group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover-lift">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+            <iconify-icon icon="solar:shield-check-linear" class="text-xl"></iconify-icon>
+          </div>
+          <h4 class="text-base font-medium mb-2 text-white">Risk Management</h4>
+          <p class="text-sm text-slate-500 mb-4">Analyse KYC, conformité bancaire et scoring de crédit.</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="text-[10px] font-mono text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">Bâle III</span>
+            <span class="text-[10px] font-mono text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded">AMF</span>
+          </div>
+        </div>
+
+        <div class="group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover-lift">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6">
+            <iconify-icon icon="solar:chart-2-linear" class="text-xl"></iconify-icon>
+          </div>
+          <h4 class="text-base font-medium mb-2 text-white">Dataviz</h4>
+          <p class="text-sm text-slate-500 mb-4">Dashboards interactifs pour le pilotage financier.</p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 px-2 py-1 rounded">Power BI</span>
+            <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 px-2 py-1 rounded">Streamlit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="relative z-10 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-white mb-10">Parcours & <span class="text-indigo-400">Certifications</span></h2>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 glass-card rounded-2xl overflow-hidden shadow-2xl">
+          <div class="bg-indigo-500/5 border-b border-white/5 px-6 py-5 flex justify-between items-center">
+            <h3 class="text-sm font-semibold text-indigo-400 uppercase tracking-widest">Expériences Professionnelles</h3>
+            <iconify-icon icon="solar:suitcase-linear" class="text-indigo-400"></iconify-icon>
+          </div>
+
+          <div class="divide-y divide-white/5">
+            <div class="group flex items-start justify-between px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-xs text-indigo-400 font-bold">BP</div>
+                <div>
+                  <div class="text-sm font-medium text-slate-200">Conseiller Accueil • Banque Populaire </div>
+                  <p class="text-xs text-slate-500 mt-1">Conformité réglementaire et gestion de la relation client.</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded">2025</span>
+              </div>
+            </div>
+
+            <div class="group flex items-start justify-between px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-xs text-indigo-400 font-bold">BNP</div>
+                <div>
+                  <div class="text-sm font-medium text-slate-200">Assistant Chargé d'Affaires • BNP Paribas </div>
+                  <p class="text-xs text-slate-500 mt-1">Analyse KYC, Back-office et montage de dossiers de financement.</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-mono text-slate-500">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 shadow-2xl">
+          <div class="flex items-center gap-2 mb-6">
+            <iconify-icon icon="solar:medal-star-linear" class="text-amber-400 text-xl"></iconify-icon>
+            <h3 class="text-sm font-semibold text-white uppercase tracking-widest">Reconnaissances</h3>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="relative pl-6 border-l border-white/10">
+              <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-indigo-500"></div>
+              <h4 class="text-sm text-white font-medium">Certification AMF </h4>
+              <p class="text-[10px] text-slate-500 uppercase mt-1">Obtenue en Mai 2025</p>
+            </div>
+            <div class="relative pl-6 border-l border-white/10">
+              <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+              <h4 class="text-sm text-white font-medium">6 Certifs Dataiku MLOps </h4>
+              <p class="text-[10px] text-slate-500 uppercase mt-1">Spécialisation Ingénierie IA</p>
+            </div>
+            <div class="relative pl-6 border-l border-white/10">
+              <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+              <h4 class="text-sm text-white font-medium">Master Big Data </h4>
+              <p class="text-[10px] text-slate-500 uppercase mt-1">Univ. Montpellier (2025)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="relative z-10 py-24 px-6 border-t border-white/5 bg-white/[0.01]">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <h2 class="text-3xl font-semibold text-white mb-2">Projets <span class="text-indigo-400">IA & Data</span></h2>
+        <p class="text-slate-500 text-sm">Applications concrètes de l'IA aux problématiques réelles.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-indigo-300 bg-indigo-500/10 px-2 py-1 rounded uppercase font-bold">Deep Learning</span>
+            <span class="text-[10px] font-mono text-purple-300 bg-purple-500/10 px-2 py-1 rounded uppercase font-bold">PySpark</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-indigo-400 transition-colors">Détection d'Anomalies Moteurs</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Analyse de séries temporelles (plus de 1M lignes). Implémentation de modèles **LSTM** pour la détection en temps réel et **XGBoost** pour l'explicabilité.
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>TensorFlow</span> • <span>DBeaver</span> • <span>SQL</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 px-2 py-1 rounded uppercase font-bold">Business Intelligence</span>
+            <span class="text-[10px] font-mono text-blue-300 bg-blue-500/10 px-2 py-1 rounded uppercase font-bold">Python</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors">Dashboard Décisionnel Comparatif</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Création de Web Apps via **Streamlit** et dashboards **Power BI** pour le suivi d'indicateurs de performance bancaires.
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>Streamlit</span> • <span>Power BI</span> • <span>Pandas</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded uppercase font-bold">Machine Learning</span>
+            <span class="text-[10px] font-mono text-slate-300 bg-slate-500/10 px-2 py-1 rounded uppercase font-bold">Scikit-Learn</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">Analyse du Taux de Désabonnement</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Prédiction des départs clients pour une banque via un modèle **Random Forest** (Précision : 92%).
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>Python</span> • <span>Random Forest</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-red-300 bg-red-500/10 px-2 py-1 rounded uppercase font-bold">Scoring</span>
+            <span class="text-[10px] font-mono text-slate-300 bg-slate-500/10 px-2 py-1 rounded uppercase font-bold">Analyse Risque</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors">Modèle de Notation & Crédit</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Développement d'outils de notation et d'évaluation du risque de crédit basés sur des données historiques. 
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>Python</span> • <span>Statistiques</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-blue-300 bg-blue-500/10 px-2 py-1 rounded uppercase font-bold">NLP</span>
+            <span class="text-[10px] font-mono text-slate-300 bg-slate-500/10 px-2 py-1 rounded uppercase font-bold">Text Mining</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">Tourism NLP Project</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Extraction de connaissances et analyse de sentiments à partir de données textuelles du secteur touristique.
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>NLTK</span> • <span>Spacy</span> • <span>Transformers</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 group hover-lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 blur-3xl"></div>
+          <div class="flex gap-2 mb-4">
+            <span class="text-[10px] font-mono text-purple-300 bg-purple-500/10 px-2 py-1 rounded uppercase font-bold">CRM</span>
+            <span class="text-[10px] font-mono text-slate-300 bg-slate-500/10 px-2 py-1 rounded uppercase font-bold">Performance</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">Performance Project CRM</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Analyse de la performance commerciale et gestion de la relation client via des outils de Data Science.
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <span>Python</span> • <span>Visualisation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-20 text-center border-t border-white/5 relative z-10">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-8">Collaborons ensemble.</h2>
+      <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-500 mb-12">
+        <span class="flex items-center gap-2"><iconify-icon icon="solar:map-point-linear" class="text-indigo-400"></iconify-icon> Melun / Paris, France</span>
+        <span class="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-indigo-400"></iconify-icon> gekkouadio@gmail.com</span>
+        <span class="flex items-center gap-2"><iconify-icon icon="solar:phone-linear" class="text-indigo-400"></iconify-icon> +33 6 50 34 28 06</span>
+      </div>
+      <p class="text-[10px] tracking-widest text-slate-700 uppercase">© 2026 GÉRARD KOUADIO • RÉALISÉ AVEC MODERN STACK</p>
+    </div>
+  </footer>
+
+</body>
+</html>
